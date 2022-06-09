@@ -53,3 +53,58 @@ PS:
 
 Read file <%j.err> for stderr output of this job.
 
+Sender: LSF System <lsfadmin@r13n45>
+Subject: Job 3830385: <Explicit> in cluster <sustchpc> Exited
+
+Job <Explicit> was submitted from host <login03> by user <mae-songjt> in cluster <sustchpc> at Thu Jun  9 23:42:11 2022.
+Job was executed on host(s) <r13n45>, in queue <debug>, as user <mae-songjt> in cluster <sustchpc> at Thu Jun  9 23:42:11 2022.
+</work/mae-songjt> was used as the home directory.
+</work/mae-songjt/HPC-project/Explicit> was used as the working directory.
+Started at Thu Jun  9 23:42:11 2022.
+Terminated at Thu Jun  9 23:42:13 2022.
+Results reported at Thu Jun  9 23:42:13 2022.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J Explicit
+#BSUB -q debug
+#BSUB -m 'r13n45'
+#BSUB -e %j.err
+#BSUB -o %j.out
+#BSUB -n 1
+
+
+module purge
+module load intel/2018.4
+module load mpi/intel/2018.4
+
+/usr/bin/time -f "run time is: %e" mpirun -np 1 ./explicit.out > $LSB_JOBID.log 2>&1
+
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.17 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <%j.err> for stderr output of this job.
+
