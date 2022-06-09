@@ -108,9 +108,6 @@ int main(int argc, char **args)
     VecView(unew,PETSC_VIEWER_STDOUT_WORLD);
     VecView(uexact,PETSC_VIEWER_STDOUT_WORLD);
 
-    //PetscCall(VecGetValues(uold,n,ix,y));
-    //PetscPrintf(PETSC_COMM_WORLD,"%d\n",i);
-    //for(i=1;i<n+1;i++)PetscPrintf(PETSC_COMM_WORLD,"%lf\n",y[i]);
     PetscCall(VecDestroy(&uold));
     PetscCall(VecDestroy(&unew));
     PetscCall(VecDestroy(&uexact));
